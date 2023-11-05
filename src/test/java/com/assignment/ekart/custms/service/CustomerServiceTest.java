@@ -112,7 +112,7 @@ public class CustomerServiceTest {
         customerCartDetails.setCustomerEmailId("k@gmail.com");
         cartProducts.add(cartProduct);
         customerCartDetails.setCartProducts(cartProducts);
-        ResponseEntity<String> response = customerService.getProducts(customerCartDetails);
+        ResponseEntity<String> response = customerService.updateProductsToKart(customerCartDetails);
         String actual = response.getBody();
         Assertions.assertEquals(expected,actual);
     }
@@ -130,7 +130,7 @@ public class CustomerServiceTest {
         customerCartDetails.setCustomerEmailId("k@gmail.com");
         cartProducts.add(cartProduct);
         customerCartDetails.setCartProducts(cartProducts);
-        ResponseEntity<String> response = customerService.getProducts(customerCartDetails);
+        ResponseEntity<String> response = customerService.updateProductsToKart(customerCartDetails);
         String actual = response.getBody();
         Assertions.assertEquals(expected,actual);
     }
